@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:#ada8a8;
+        }
+        #box{
+            height:450px;
+            width:300px;
+            background-color: #746f6f;
+            border-radius: 20px;
+            box-shadow:5px 10px 5px 10px #4f4040;
+        }
+        /* #screen{
+            height:45px;
+            width:90%;
+            color:white;
+            border-color:white;
+            border-radius:15px;
+        } */
+        form{
+            padding-top:50px;
+    
+        }
+        table{
+            border-spacing:20px;
+        }
+        #screen{
+            height:50px;
+            width:90%;
+            border-style: hidden;
+            border-radius:15px;
+            background-color:#c8c8c2;
+        }
+      
+        .buttons{
+            border-radius: 12px;
+            height: 45px;
+            width: 50px;
+            background-color:#dbd8d8;;
+            border-color: white;
+            font-size: 45pz;
+            font-size: 20px;
+            font-style: italic;
+            
+        }
+        .buttons:hover{
+            background-color:blue;
+        }
+        #answer{
+            background-color:#ff7b06d6;
+        }
+        
+
+       
+    </style>
+</head>
+<body>
+    <div id="container" align="center" >
+        <div id="box">
+            <form name="calc" >
+                <input type="text" name="input" id="screen" >
+
+            </form>
+        
+        <table>
+    
+            <tr>
+                <td> <input type="button"  class ="buttons" value="C" onclick="calc.input.value=''" > </td>
+                <td> <input type="button" class = "buttons" value="DEL" onclick="calc.input.value=calc.input.value"></td>
+                <td> <input type="button" class ="buttons" value="/"></td>
+
+            </tr>
+            <tr>
+                <td> <input type="button" class ="buttons" value="9" onclick="calc.input.value += '9'"></td>
+                <td><input type="button" class ="buttons" value="8" onclick="calc.input.value +='8'"></td>
+                <td><input type="button" class ="buttons" value="7" onclick="calc.input.value += '7'"></td>
+                <td> <input type="button" class ="buttons" value="+" onclick="calc.input.value += '+'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class ="buttons" value="6" onclick="calc.input.value += '6'"></td>
+                <td><input type="button"class ="buttons" value="5" onclick="calc.input.value += '5'"></td>
+                <td><input type="button"class ="buttons" value="4" onclick="calc.input.value += '4'"></td>
+                <td><input type="button" class ="buttons" value="-" onclick="calc.input.value += '-'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class ="buttons" value="3" onclick="calc.input.value += '3'"></td>
+                <td><input type="button" class ="buttons" value="2" onclick="calc.input.value += '2'"></td>
+                <td><input type="button" class ="buttons" value="1" onclick="calc.input.value += '1'"></td>
+                <td><input type="button" class ="buttons" value="x" onclick="calc.input.value += '*'"></td>
+            </tr>
+            <tr>
+                <td><input type="button" class ="buttons" value="0" onclick="calc.input.value += '0'"></td>
+                <td><input type="button" class ="buttons" value="." onclick="calc.input.value += '.'"></td>
+                <td><input type="button" class ="buttons" id="answer" value="=" onclick="calc.input.value = eval(calc.input.value)"></td>
+            </tr>
+        </table>
+        </div>
+
+    </div>
+    
+</body>
+</html>
